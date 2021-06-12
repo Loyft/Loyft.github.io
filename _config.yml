@@ -23,6 +23,9 @@ paginate:         5
 # paginate_path:    '/page:num'
                     # Or '/blog/page:num' if you want to move your index pages
 
+include:
+  - "_screenshots"
+
 plugins:
   - jekyll-feed
   - jekyll-gist
