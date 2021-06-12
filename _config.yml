@@ -6,8 +6,8 @@ highlighter:      rouge
 title:            Loyft
 tagline:          'Blog'
 description:      'A Blog about Data Science and AI Projects'
-url:              https://fongandrew.github.io
-baseurl:          '/loyft'
+url:              https://loyft.github.io
+baseurl:          /
                   # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
@@ -17,7 +17,7 @@ remote_theme: fongandrew/hydeout
 
 author:
   name:           'Loyft'
-  url:            https://twitter.com/loyft
+  url:            https://twitter.com/
 
 paginate:         5
 # paginate_path:    '/page:num'
