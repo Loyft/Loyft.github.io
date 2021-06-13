@@ -10,7 +10,7 @@ tags:
 
 ### Intro
 
-Sentiment analysis of 3585 articles that were published on Spiegel Online between 5/5/21 and 6/5/21. Including Spiegel Plus and deleted articles.
+Sentiment analysis of 3.585 articles that were published on Spiegel Online between 5/5/21 and 6/5/21. Including Spiegel Plus and deleted articles.
 
 ![ref](/_screenshots/ref.jpg?raw=true)
 

@@ -1,8 +1,0 @@
-I"<p class="message">
-  Hey there!
-  I'm a Developer from Germany and on this Blog I want to share some of my Projects. 
-</p>
-
-<p>To make pages show up in the sidebar, add <code class="language-plaintext highlighter-rouge">sidebar_link: true</code> to the front
-matter.</p>
-:ET

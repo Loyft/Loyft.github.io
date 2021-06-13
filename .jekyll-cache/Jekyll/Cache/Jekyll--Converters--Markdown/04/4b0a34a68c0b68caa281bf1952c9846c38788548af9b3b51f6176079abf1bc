@@ -1,6 +1,6 @@
-I"ª<h3 id="intro">Intro</h3>
+I"¬<h3 id="intro">Intro</h3>
 
-<p>Sentiment analysis of 3585 articles that were published on Spiegel Online between 5/5/21 and 6/5/21. Including Spiegel Plus and deleted articles.</p>
+<p>Sentiment analysis of 3.585 articles that were published on Spiegel Online between 5/5/21 and 6/5/21. Including Spiegel Plus and deleted articles.</p>
 
 <p><img src="/_screenshots/ref.jpg?raw=true" alt="ref" /></p>
 
@@ -26,5 +26,5 @@
 
 <p>The graphic below displays the mean sentiment per category as a box plot. The only category with all positive articles is <em>Tests</em>. The least positive Article in <em>Tests</em> has a sentiment score of 0.146, which is still in the top 16% of the most positive rated articles.</p>
 
-<p><img src="/_screenshots/ref_box.png?raw=true" alt="sent_test" /></p>
+<p><img src="/_screenshots/ref_box.jpeg?raw=true" alt="sent_test" /></p>
 :ET
