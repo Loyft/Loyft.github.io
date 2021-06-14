@@ -72,6 +72,7 @@ body {
 // Hide secondary nav content in sidebar
 // Hide lead paragraph in sidebar
 #sidebar {
+  top: 10px;
   header ~ *,
   header ~ nav,
   p.lead {
