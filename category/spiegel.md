@@ -4,7 +4,7 @@ title: Spiegel Online
 sidebar_link: true
 ---
 
-## Spiegel Online Sentiment analysis
+**Spiegel Online Sentiment analysis**
 
 ### 2021
 

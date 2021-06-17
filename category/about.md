@@ -9,4 +9,4 @@ title: About
   - Sebastian
 </p>
 
-Check out my <a href='https://www.github.com/loyft'>github</a> or send me a mail at mymail@mail.com
+Check out my <a href='https://www.github.com/loyft'>github</a> or send me a message on discord.
