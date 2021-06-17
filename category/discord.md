@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Discord
+title: Discord Bot
 sidebar_link: true
+tags:
+  - Discord
+  - Twitter
 ---
 
-<p class="message">
-  Some posts about Discord Bots will be put here soon ...
-</p>
+**Multipart Series about setting up Discord Bot functionalities**
 
-Check out my <a href='https://www.github.com/loyft'>github</a> or send me a mail at mymail@mail.com
+- [Get tweets from a user to show in a channel](/2021/05/23/Get-tweets-from-a-user.html)

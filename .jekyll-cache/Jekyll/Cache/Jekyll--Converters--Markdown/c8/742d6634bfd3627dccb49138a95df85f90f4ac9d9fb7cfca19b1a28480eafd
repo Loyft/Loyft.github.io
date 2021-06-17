@@ -1,0 +1,87 @@
+I"f<h2 id="multipart-series-about-setting-up-a-discord-bot">Multipart Series about setting up a Discord Bot</h2>
+
+<p>This guide is about using Python and the Twitter API to get the latest tweets from a user on twitter</p>
+
+<h3 id="setup-a-twitter-developer-account">Setup a Twitter Developer Account</h3>
+
+<p>To setup a Twitter Developer Account, we first need a regular user Account.</p>
+<ul>
+  <li>head to <a href="twitter.com">twitter</a> and register your Account</li>
+</ul>
+
+<p>Once we have a User Account, we can setup the Developer Account</p>
+<ul>
+  <li><a href="https://developer.twitter.com/en/apply-for-access">register</a> a Developer Account</li>
+</ul>
+
+<p>After both are setup we need to create a new App under the Projects &amp; Apps tab on the left side.
+It’s important to create the Project, and then assign the App to that Project.</p>
+
+<p>Creating the App allows us to get access to an API Key, which we can then use to make API calls to the Twitter Endpoints to retrieve the data.</p>
+
+<h3 id="setup-authentication-with-python">Setup authentication with Python</h3>
+
+<p>To handle our API calls to Twitters Endpoint we need to import <code class="language-plaintext highlighter-rouge">tweepy</code></p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># import the tweepy package
+</span><span class="kn">import</span> <span class="nn">tweepy</span>
+</code></pre></div></div>
+
+<p>To allow <code class="language-plaintext highlighter-rouge">tweepy</code> to authenticate us we need to provide it with the API Key, API Secret, Access Token and Access Token Secret. I created an extra file <code class="language-plaintext highlighter-rouge">keys.py</code> to store those information and import them easily.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Import keys and tokens from key.py
+</span><span class="kn">from</span> <span class="nn">keys</span> <span class="kn">import</span> <span class="n">twitter_api_key</span><span class="p">,</span> <span class="n">twitter_api_secret</span><span class="p">,</span> <span class="n">twitter_access_token</span><span class="p">,</span> <span class="n">twitter_access_token_secret</span>
+
+<span class="c1"># Setup tweepy authentication
+</span><span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="p">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">twitter_api_key</span><span class="p">,</span> <span class="n">twitter_api_secret</span><span class="p">)</span>
+<span class="n">auth</span><span class="p">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">twitter_access_token</span><span class="p">,</span> <span class="n">twitter_access_token_secret</span><span class="p">)</span>
+
+<span class="c1"># Initialize tweepy api
+</span><span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="p">.</span><span class="n">API</span><span class="p">(</span><span class="n">auth</span><span class="p">,</span> <span class="n">wait_on_rate_limit</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">wait_on_rate_limit_notify</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="calling-the-api">Calling the API</h3>
+
+<p>Creating a function and passing the name of the User we want to get Tweets from.
+For easier readability I also created a constant for the Twitter URL</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Assign url constant
+</span><span class="n">TWITTER_URL</span> <span class="o">=</span> <span class="s">"https://twitter.com"</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Function to get tweets
+</span><span class="k">def</span> <span class="nf">get_tweets</span><span class="p">(</span><span class="n">user_name</span><span class="p">):</span>
+
+	<span class="c1"># Calling api.get_user(user) to get the users information
+</span>	<span class="n">user</span> <span class="o">=</span> <span class="n">api</span><span class="p">.</span><span class="n">get_user</span><span class="p">(</span><span class="n">t_user</span><span class="p">)</span>
+
+	<span class="c1"># Searching the json for the 'id' that matches the Users name
+</span>  <span class="n">user_id</span> <span class="o">=</span> <span class="n">user</span><span class="p">.</span><span class="n">_json</span><span class="p">[</span><span class="s">"id"</span><span class="p">]</span>
+
+	<span class="c1"># Get latest tweets of user with specified ID
+</span>  <span class="n">latest_tweets</span> <span class="o">=</span> <span class="n">api</span><span class="p">.</span><span class="n">user_timeline</span><span class="p">(</span><span class="n">user_id</span><span class="o">=</span><span class="n">user_id</span><span class="p">,</span>
+																		<span class="n">count</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+																		<span class="n">exclude_replies</span><span class="o">=</span><span class="s">"true"</span><span class="p">,</span>
+																		<span class="n">include_trs</span><span class="o">=</span><span class="s">"true"</span><span class="p">)</span>
+
+
+<span class="c1"># Call the get_tweets function and provide an username as parameter
+</span><span class="n">get_tweets</span><span class="p">(</span><span class="s">'elonmusk'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">count</code> - specifies the amount of tweets, starting with the newest</p>
+
+<p>To get the actual Text message of the latest Tweet we can access the <code class="language-plaintext highlighter-rouge">text</code> keyword in the json:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Loop through the latest_tweets
+</span><span class="k">for</span> <span class="n">tweet</span> <span class="ow">in</span> <span class="n">latest_tweets</span><span class="p">:</span>
+
+				<span class="c1"># Filter out the values where the key matches 'text'
+</span>        <span class="n">tweet_text</span> <span class="o">=</span> <span class="n">tweet</span><span class="p">.</span><span class="n">_json</span><span class="p">[</span><span class="s">'text'</span><span class="p">]</span>
+
+<span class="c1"># Print the value of the tweet
+</span><span class="k">print</span><span class="p">(</span><span class="n">tweet_text</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>For further information check the official <a href="https://docs.tweepy.org/en/latest/api.html#tweepy.API.user_timeline">Tweepy documentation</a></p>
+:ET
