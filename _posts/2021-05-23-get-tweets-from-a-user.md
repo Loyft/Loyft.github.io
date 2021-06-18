@@ -83,7 +83,6 @@ To get the actual Text message of the latest Tweet we can access the `text` keyw
 ```python
 # Loop through the latest_tweets
 for tweet in latest_tweets:
-
   # Filter out the values where the key matches 'text'
   tweet_text = tweet._json['text']
 
