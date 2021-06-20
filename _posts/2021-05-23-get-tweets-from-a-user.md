@@ -72,7 +72,7 @@ def get_tweets(user_name):
                                     exclude_replies="true",
                                     include_trs="true")
 
-# Call the get_tweets function and provide an username as parameter
+# Call the get_tweets function and provide an username as argument
 get_tweets('elonmusk')
 ```
 
