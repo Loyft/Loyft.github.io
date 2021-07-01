@@ -1,0 +1,29 @@
+I"�	<h3 id="intro">Intro</h3>
+
+<p>Spiegel Online published 3.590 articles in June 2021. An important event during that time was the soccer EM 2021, which started on June 11 and had a few interesting impacts on the articles.</p>
+
+<h4 id="articles-per-category">Articles per Category</h4>
+
+<p>First we will take a look at the overall amount of articles published per category. As expected there’s a significant increase in articles for the <em>Sport</em> category.<br />
+<em>Panorama</em> is again the category with the most articles. Overall this month was dominated by <em>Panorama</em>, <em>Sport</em>, <em>Ausland</em>, <em>Politik</em> and <em>Wirtschaft</em>.</p>
+
+<p><img src="/_screenshots/0621/0621_cat_bar.jpg?raw=true" alt="ref" /></p>
+
+<p>The graphic below shows how many <em>Sport</em> articles came out each day in June. We see a strong correlation between the start of the soccer EM on June 11th and the increase of articles per day.</p>
+
+<p><img src="/_screenshots/0621/2106_sport_line.jpg?raw=true" alt="ref" /></p>
+
+<p>Germany won the first two matches, which caused an increase in articles on the next day. The match on June 23 against Hungary ended with a draw and there’s a drop in articles on the next day.<br />
+June 29 is the day with the most articles published during the whole month. The match against England ended with a lose and the article count on the next day drops by almost 50%</p>
+
+<h4 id="sentiment-per-category">Sentiment per Category</h4>
+
+<p><img src="/_screenshots/0621/2106_sent_bar.jpg?raw=true" alt="ref" /></p>
+
+<p>This month <em>Ausland</em> is the only category with mostly negative articles. Again <em>Sport</em> is by far the most positive category, although not as strong as last month where it had a score of over <code class="language-plaintext highlighter-rouge">100</code>, compared to this month with barely <code class="language-plaintext highlighter-rouge">50</code>.</p>
+
+<p><img src="/_screenshots/0621/2106_sent_box_backstage.jpg?raw=true" alt="ref" /></p>
+
+<p><em>Tests</em> is again very positive, as well as <em>Dein Spiegel</em>. But the crown for the most positive category goes to <em>Backstage</em>, a new category where the Spiegel Online Service <strong>Audio+</strong> is advertised.<br />
+<em>Backstage</em> has a mean sentiment score of <code class="language-plaintext highlighter-rouge">0.71</code>, beating the old Highscore from last months <em>Tests</em> which was <code class="language-plaintext highlighter-rouge">0.47</code>.</p>
+:ET

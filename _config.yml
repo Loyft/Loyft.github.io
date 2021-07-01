@@ -5,7 +5,7 @@ highlighter:      rouge
 # Setup
 title:            Loyft
 tagline:          'Blog'
-description:      'A Blog about Data Science and AI Projects'
+description:      'A Blog about AI and Data Science Projects'
 url:              https://loyft.github.io
 baseurl:          /
                   # the optional subpath of your site, e.g. "/blog"

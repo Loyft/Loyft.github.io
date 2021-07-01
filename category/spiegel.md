@@ -8,4 +8,5 @@ sidebar_link: true
 
 ### 2021
 
-- [05 / 2021](/2021/06/12/spiegel-online-sentiment.html)
+- [June](/2021/07/01/spiegel-online-sentiment-0621.html) (soccer EM 2021)
+- [May](/2021/06/12/spiegel-online-sentiment.html)
